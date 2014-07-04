@@ -1,0 +1,29 @@
+.inner_row
+  .inner_container
+    .mod-match_confirmation
+      .row-fluid.narrow
+        .span6
+          - # duplicated below for responsive reasons
+          .round_profile.left_only
+            = image_tag 'anonymous.png', :width => 120, :height => 120, :alt => 'You'
+
+          %h2
+            Hey
+            %span>= ", bist du interessiert an dieser Stelle?"
+
+          - # duplicated above for responsive reasons
+          .round_profile.top_only
+            = image_tag 'anonymous.png', :width => 120, :height => 120, :alt => 'You'
+
+        .span6
+          = simple_form_for @match_confirmation, :html => { :class => 'full_width labelify large' } do |f|
+            = f.input :name, :label => 'Name'
+            = f.input :email, :label => 'E-Mail'
+
+            - if @requirements.present?
+              .requirements
+                %h4 Requirements
+                = f.collection_check_boxes :requirements, @requirements, :to_s, :to_s
+
+            .button_with_text
+              = f.button :submit, 'Ich bin interessiert', :class => 'button gray'

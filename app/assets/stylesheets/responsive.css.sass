@@ -1,0 +1,29 @@
+@mixin responsive($media)
+  @if $media == 'left'
+    @media (min-width: 850px)
+      @content
+  @else if $media == 'left_small'
+    @media (min-width: 850px) and (max-width: 949px)
+      @content
+  @else if $media == 'left_max'
+    @media (min-width: 1150px)
+      @content
+  @else if $media == 'left_large'
+    @media (min-width: 950px) and (max-width: 1149px)
+      @content
+  @else if $media == 'left_large_min'
+    @media (min-width: 950px)
+      @content
+
+  @else if $media == 'top'
+    @media (max-width: 849px)
+      @content
+  @else if $media == 'top_small'
+    @media (max-width: 499px)
+      @content
+  @else if $media == 'top_large'
+    @media (min-width: 500px) and (max-width: 849px)
+      @content
+  @else if $media == 'top_large_min'
+    @media (min-width: 500px)
+      @content

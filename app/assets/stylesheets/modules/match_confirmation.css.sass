@@ -1,0 +1,69 @@
+.mod-match_confirmation
+  h2
+    line-height: 1em
+    font-family: "Lucida Grande", Arial, Helvetica, Verdana, sans-serif
+
+    span
+      line-height: 1.3em
+      font-size: 16px
+    &.full_width
+      padding: 20px 0 0 0
+
+  .round_profile
+    margin: 0 auto 20px auto
+  form
+    margin: 0 0 50px 0
+    .input
+      margin: 0 0 10px 0
+    label
+      font-size: 16px
+      font-weight: bold
+      margin: 0 0 10px 0
+      display: block
+      &.hide
+        display: none
+
+    .requirements
+      background: #e6f4ff
+      padding: 15px 15px 5px 15px
+      margin: 0 0 10px 0
+
+      input
+        float: left
+
+      label
+        font-weight: normal
+        padding: 0
+        margin: 0 0 10px 25px
+
+
+      .input.checkbox, .input.radio
+      label
+        font-weight: normal
+
+  .solid
+    padding: 20px 15px
+    margin: 0 0 10px 0
+    background: #e6f4ff
+
+  +responsive('top')
+    text-align: center
+    .span6, .span3, .span9
+      width: auto
+      float: none
+    .button_with_text
+      .button
+        float: none
+        margin: 0
+      p
+        display: block
+
+  +responsive('left')
+    .round_profile
+      float: left
+      margin: 0 30px 0 0
+
+    .narrow
+      h2
+        float: left
+        width: 180px

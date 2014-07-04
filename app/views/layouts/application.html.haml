@@ -1,0 +1,21 @@
+!!! 5
+%html{:lang => I18n.locale, :xmlns => "http://www.w3.org/1999/xhtml", :'xmlns:fbml' => "http://www.facebook.com/2008/fbml", :'xmlns:og' => "http://ogp.me/ns", :'xmlns:fb' => 'http://ogp.me/ns/fb', :'xmlns:silp-com' => 'http://ogp.me/ns/fb/silp-com' }
+  %head
+  %title Quiz
+  = stylesheet_link_tag    "application", media: "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+
+  %body{ :id => 'branding' }
+
+    .layout_container
+      #brand.brand_color
+        .inner_container
+
+      #content
+        .inner_container
+          = yield
+
+      #footer
+        .inner_container
+          Footer
