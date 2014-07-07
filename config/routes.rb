@@ -57,4 +57,8 @@ Quiz::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :jobs
+  resources :match_confirmations
+  resources :applicants
+  get '/update_job', to: "job_updater#update_job"
 end

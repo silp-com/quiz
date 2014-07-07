@@ -1,12 +1,17 @@
-= image_tag 'apply_success.jpg'
-= image_tag 'sprites@2x.png'
+= image_tag 'apply_success.jpg', class: 'main_image'
+.sprites_img
+= image_tag 'sprites@2x.png', class: 'sprites_img'
 
-%h2 Vielen Dank für Ihre Bewerbung
-%p Ihre Daten wurden von Silp an CSS Versicherungen übermittelt. Sie werden kontaktiert, falls Sie als Bewerber in Frage kommen.
+.thanks
+  %h2 Vielen Dank für Ihre Bewerbung
+  %p Ihre Daten wurden von Silp an CSS Versicherungen übermittelt. Sie werden kontaktiert, falls Sie als Bewerber in Frage kommen.
 
+.newsletter
 
-%h3 Über passende Jobs informiert werden?
+  %h3 Über passende Jobs informiert werden?
 
-= link_to 'Anmelden', '#'
+  .form
+    = text_field_tag 'email', 'email@bewerber.com'
+    = link_to 'Anmelden', '#', class: 'button_with_text'
 
-%p Silp nutzt Ihr Facebook Profil um Ihnen passende Jobs zu schicken.
+    %p Silp nutzt Ihr Facebook Profil um Ihnen passende Jobs zu schicken.
