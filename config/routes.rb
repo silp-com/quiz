@@ -1,7 +1,9 @@
 Quiz::Application.routes.draw do
                  
   # non-restful routes for the quizzes             
-
+  resources :jobs, :only => [:index]
+  resources :match_confirmations, :only => [:create]     
+  resources :applicants, :only => [:index]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
